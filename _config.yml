@@ -1,0 +1,27 @@
+# Site settings
+name: HelloLux
+email: hellolux@163.com
+author: HelloLux
+# url: http://www.hifreud.com
+# resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/hellolux/
+# baseurl修改为项目名，如果项目是'***.github.io'，则设置为空''
+baseurl: ""
+description: 车到山前必有路,船到桥头自然直.
+meta_description: HelloLux;个人博客;车到山前必有路,船到桥头自然直.
+banner: 车到山前必有路,船到桥头自然直.
+motto: HelloLux
+
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: hellolux
+
+# Build settings
+markdown: kramdown
+
+baidu_analysis: 04356aabaa2bd9ee831ca587ab831be0
+
