@@ -1,0 +1,26 @@
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            <main class="col-md-12">
+            {% for post in site.posts  %}
+            
+            <article class="post post-1">
+                <header class="entry-header">
+                <h1 class="entry-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h1>
+                <div class="entry-meta">
+                    <span class="post-category"><a href="{{ post.url }}">{{ post.categories }}</a></span>
+                    <span class="post-category"><a href="{{ post.url }}">{{ post.tag }}</a></span>
+        
+                    <span class="post-date"><a href="{{ post.url }}"><time class="entry-date" datetime="{{ post.date }}">{{ post.date | date: "%B %d,%Y" }}</time></a></span>
+                    <span class="comments-link"><a href="{{ post.url }}">HelloLux</a></span>
+                </div>
+                </header>
+            </article>
+
+            {% endfor %}
+            </main>            
+        </div>
+    </div>
+</div>

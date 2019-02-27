@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+             
+            
+            <aside class="col-md-4 sidebar">
+                <div class="widget widget-recent-posts" role="complementary" id="navigation">		
+                    <h3 class="widget-title">目录</h3>		
+                    <ul class="sidenav">
+
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="col-md-10 col-right">
+
+                    <article class="post post-1">
+                        <header class="entry-header">
+                            <h1 class="entry-title">
+                                <a href="{{ page.url }}">{{ page.title }}</a>
+                            </h1>
+                            <div class="entry-meta">
+                                <span class="post-category"><a href="{{ page.url }}">{{ page.categories }}</a></span>
+                                <span class="post-category"><a href="{{ page.url }}">{{ page.tag }}</a></span>
+                        
+                                <span class="post-date"><a href="{{ page.url }}"><time class="entry-date" datetime="{{ page.date }}">{{ page.date | date: "%B %d,%Y" }}</time></a></span>
+                                <span class="comments-link"><a href="{{ page.url }}">HelloLux</a></span>
+                            </div>
+                        </header>
+                        <div class="entry-content clearfix">
+                            {{ content }}     
+                        </div>
+                    </article>
+    
+                </main>   
+        </div>
+    </div>
+</div>

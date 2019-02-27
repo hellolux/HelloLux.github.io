@@ -5,50 +5,34 @@
 
   <body>
     
-    <header id="header">
-        {% if page.title%}
-            <h1>{{ page.title }}</h1>
-        {% else %}
-            <h1><a href="/">{{ site.name }}</a></h1>
-            <p>{{ site.description }}</p>
-        {% endif %}
-        <!-- <div id="topbar">
-            <nav>
-                <ul>
-                  <li><a href="/">首页</a></li>
-                  <li><a href="/archives">Blog</a></li>
-                  <li><a href="/about">关于我</a></li>
-                  <li><a href="/feed.xml">RSS Feed</a></li>
-                </ul>
-              </nav>
-        </div> -->
-    </header>
+    <div class="container">	
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-4 col-sm-5 col-xs-8">
+						<div class="logo">
+							<h1><a href="/"><b>Hello</b> Lux</a></h1>
+						</div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-8 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+    								<li class="cl-effect-11"><a href="/" >首页</a></li>
+    								<li class="cl-effect-11"><a href="{{ '/about' | prepend: site.baseurl }}" >关于</a></li>
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+    </div>  
 
-    
-    <div id="page">
+    {% if page.title %}
+      {{ content }}
+    {% else %}
+      {% include list.html %} 
+    {% endif %}
 
-        <div id="sidebar">
-            <nav>
-              <ul>
-                <li><a href="/">首页</a></li>
-                <li><a href="/archives">Blog</a></li>
-                <li><a href="/about">关于我</a></li>
-                <li><a href="/feed.xml">RSS Feed</a></li>
-              </ul>
-            </nav>
-        </div>        
-
-        <div id="content">
-          {{ content }}
-        </div>
-
-    </div>
-
-    <footer id="footer">
-      <p class="copyright">Copyright &copy; 2019-{{ site.time | date: '%Y' }} <a href="{{site.resume_site}}"><code>{{ site.author }}</code></a>. </p>
-      <p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme by <a href="http://www.webmaster-source.com">Matt Harzewski</a>, refactored by<a href="https://hellolux.github.io/">HelloLux</a></p>
-    </footer>
-
-
+    {% include footer.html %} 
   </body>
 </html>
