@@ -15,7 +15,7 @@ permalink: /about/
 - [Blog](https://hellolux.github.io)
 - [GitHub](https://hellolux.github.io)
 - <hellolux@163.com>
-- WeChat: <img src="/styles/images/wechat.jpg" width = "300" height = "389" />
+- WeChat: <img src="/styles/images/wechat.JPG" width = "300" height = "389" />
 
 # 2019书单
 
