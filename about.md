@@ -13,7 +13,7 @@ permalink: /about/
 # 联系方式
 
 - [Blog](https://hellolux.github.io)
-- [GitHub](https://hellolux.github.io)
+- [GitHub](https://github.com/hellolux)
 - <hellolux@163.com>
 - WeChat: <img src="/styles/images/wechat.JPG" width = "300" height = "389" />
 
