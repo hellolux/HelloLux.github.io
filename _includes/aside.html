@@ -1,0 +1,38 @@
+<aside class="col-md-4">
+    <div class="widget widget-archives">		
+        <h3 class="widget-title">时间</h3>		
+        <ul>
+            {% assign flag = 0 %}
+            {% for post in site.posts  %}
+                {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+                {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+                {% if flag == 0 %}
+                    <li>
+                        <a href="{{ site.baseurl}}/time/{{ this_year }}">{{ this_year }}</a>
+                    </li>
+                    {% assign flag = 1 %}
+                {% endif %}
+                {% if this_year != next_year %}
+                    {% assign flag = 0 %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="widget widget-category">		
+        <h3 class="widget-title">分类</h3>		
+        <ul>
+            {% for category in site.categories %}
+            <li>
+                <a href="{{ site.baseurl}}/category/{{ category.first }}">{{ category | first  }}({{ category | last | size }})</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="widget widget-recent-posts" id="search-demo-container">		
+        <h3 class="widget-title">搜索</h3>		
+        <input type="text" id="search-input" placeholder="搜索...">
+        <ul id="results-container"></ul>
+    </div>
+</aside>  

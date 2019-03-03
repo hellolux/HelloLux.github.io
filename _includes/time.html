@@ -1,0 +1,16 @@
+<div class="content-body">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8">
+                    {% for post in site.posts  %}
+                        {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+                        {% capture page_year %}{{ page.date | date: "%Y" }}{% endcapture %}
+                        {% if this_year == page_year %}
+                            {% include article.html %}
+                        {% endif %}
+                    {% endfor %}
+                </main>
+                {% include aside.html %}           
+            </div>
+        </div>
+    </div>
