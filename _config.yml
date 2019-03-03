@@ -25,3 +25,8 @@ markdown: kramdown
 
 baidu_analysis: 04356aabaa2bd9ee831ca587ab831be0
 
+# 分页
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "page/:num/"
+
