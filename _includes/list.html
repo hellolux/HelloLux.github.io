@@ -20,20 +20,16 @@
                     </ul>
                 </div> -->
 
-                <!-- <div class="widget widget-category">		
-                    <h3 class="widget-title">Category</h3>		
+                <div class="widget widget-category">		
+                    <h3 class="widget-title">分类</h3>		
                     <ul>
+                        {% for category in site.categories %}
                         <li>
-                            <a href="#">Web Design</a>
+                            <a href="{{ site.baseurl}}/category/{{ category.first }}">{{ category | first  }}({{ category | last | size }})</a>
                         </li>
-                        <li>
-                            <a href="#">Web Development</a>
-                        </li>
-                        <li>
-                            <a href="#">SEO</a>
-                        </li>
+                        {% endfor %}
                     </ul>
-                </div> -->
+                </div>
 
                 <div class="widget widget-recent-posts" id="search-demo-container">		
                     <h3 class="widget-title">搜索</h3>		

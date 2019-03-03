@@ -35,7 +35,11 @@
       {{ content }}
     {% else %}
       {% include list.html %} 
-    {% endif %}
+		{% endif %}
+		
+		{% if page.title == '分类' %}
+			{% include category.html %}
+		{% endif %}
 
     {% include footer.html %} 
   </body>

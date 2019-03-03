@@ -1,0 +1,61 @@
+<div class="content-body">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8">
+                    {% for category in site.categories %}
+                        {% if category.first == page.categories %}
+                            {% for post in category.last %}
+                                <article class="post post-1">
+                                    <header class="entry-header">
+                                    <h1 class="entry-title">
+                                        <a href="{{ post.url }}">{{ post.title }}</a>
+                                    </h1>
+                                    <div class="entry-meta">
+                                        <span class="post-category"><a href="{{ post.url }}">{{ post.categories }}</a></span>
+                                        <span class="post-category"><a href="{{ post.url }}">{{ post.tag }}</a></span>
+                                
+                                        <span class="post-date"><a href="{{ post.url }}"><time class="entry-date" datetime="{{ post.date }}">{{ post.date | date: "%B %d,%Y" }}</time></a></span>
+                                        <span class="comments-link"><a href="{{ post.url }}">HelloLux</a></span>
+                                    </div>
+                                    </header>
+                                </article>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </main>
+                <aside class="col-md-4">
+                    <!-- <div class="widget widget-archives">		
+                        <h3 class="widget-title">Archives</h3>		
+                        <ul>
+                            <li>
+                                <a href="#">November 2014</a>
+                            </li>
+                            <li>
+                                <a href="#">September 2014</a>
+                            </li>
+                            <li>
+                                <a href="#">January 2013</a>
+                            </li>
+                        </ul>
+                    </div> -->
+    
+                    <div class="widget widget-category">		
+                        <h3 class="widget-title">分类</h3>		
+                        <ul>
+                            {% for category in site.categories %}
+                            <li>
+                                <a href="{{ site.baseurl}}/category/{{ category.first }}">{{ category | first  }}({{ category | last | size }})</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+    
+                    <div class="widget widget-recent-posts" id="search-demo-container">		
+                        <h3 class="widget-title">搜索</h3>		
+                        <input type="text" id="search-input" placeholder="搜索...">
+                        <ul id="results-container"></ul>
+                    </div>
+                </aside>            
+            </div>
+        </div>
+    </div>
