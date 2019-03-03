@@ -9,8 +9,9 @@ $(function () {
         $("#markdown-toc").remove();
 
     }
+
+    
     
 })
 
 }(jQuery)
-  
