@@ -24,6 +24,6 @@ permalink: /about/
 - [x] 《毕业》
 - [x] 《白马山庄迷案》
 - [x] [Vue.js](https://cn.vuejs.org/v2/guide/)
-- [ ] 《月亮与六便士》
+- [x] 《月亮与六便士》
 - [ ] 《十一字杀人案》
 - [ ] 《C语言经典编程282例》
