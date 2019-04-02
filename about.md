@@ -26,4 +26,5 @@ permalink: /about/
 - [x] [Vue.js](https://cn.vuejs.org/v2/guide/)
 - [x] 《月亮与六便士》
 - [x] 《C语言经典编程282例》
+- [x] 《十问》
 - [ ] 《十一字杀人案》
